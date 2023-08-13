@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		51BB0B5B2A889AF3000CE423 /* ValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB0B5A2A889AF3000CE423 /* ValueView.swift */; };
 		51BB0B5D2A889FF3000CE423 /* RefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB0B5C2A889FF3000CE423 /* RefreshView.swift */; };
+		51BB0B5F2A88AD74000CE423 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51BB0B5E2A88AD74000CE423 /* keys.plist */; };
+		51BB0B612A88ADC0000CE423 /* keysUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB0B602A88ADC0000CE423 /* keysUtil.swift */; };
+		51BB0B632A88AEFC000CE423 /* .gitingore in Resources */ = {isa = PBXBuildFile; fileRef = 51BB0B622A88AEFC000CE423 /* .gitingore */; };
 		51EE33512A877F5C00D816CF /* Polwe Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 51EE33502A877F5C00D816CF /* Polwe Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		51EE33562A877F5C00D816CF /* PolweApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EE33552A877F5C00D816CF /* PolweApp.swift */; };
 		51EE33582A877F5C00D816CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EE33572A877F5C00D816CF /* ContentView.swift */; };
@@ -45,6 +48,9 @@
 /* Begin PBXFileReference section */
 		51BB0B5A2A889AF3000CE423 /* ValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueView.swift; sourceTree = "<group>"; };
 		51BB0B5C2A889FF3000CE423 /* RefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshView.swift; sourceTree = "<group>"; };
+		51BB0B5E2A88AD74000CE423 /* keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
+		51BB0B602A88ADC0000CE423 /* keysUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keysUtil.swift; sourceTree = "<group>"; };
+		51BB0B622A88AEFC000CE423 /* .gitingore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitingore; sourceTree = "<group>"; };
 		51EE334A2A877F5C00D816CF /* Polwe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Polwe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51EE33502A877F5C00D816CF /* Polwe Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Polwe Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51EE33552A877F5C00D816CF /* PolweApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolweApp.swift; sourceTree = "<group>"; };
@@ -69,6 +75,7 @@
 		51EE33432A877F5B00D816CF = {
 			isa = PBXGroup;
 			children = (
+				51BB0B622A88AEFC000CE423 /* .gitingore */,
 				51EE336F2A878B1E00D816CF /* Fonts */,
 				51EE33542A877F5C00D816CF /* Polwe Watch App */,
 				51EE334B2A877F5C00D816CF /* Products */,
@@ -88,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				51EE33552A877F5C00D816CF /* PolweApp.swift */,
+				51BB0B5E2A88AD74000CE423 /* keys.plist */,
 				51EE33572A877F5C00D816CF /* ContentView.swift */,
 				51EE336A2A87847E00D816CF /* API */,
 				51EE33692A87847300D816CF /* Views */,
@@ -118,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				51EE33672A877F8200D816CF /* api.swift */,
+				51BB0B602A88ADC0000CE423 /* keysUtil.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -216,6 +225,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51BB0B632A88AEFC000CE423 /* .gitingore in Resources */,
+				51BB0B5F2A88AD74000CE423 /* keys.plist in Resources */,
 				51EE336E2A878B0C00D816CF /* Inter.ttf in Resources */,
 				51EE335D2A877F5D00D816CF /* Preview Assets.xcassets in Resources */,
 				51EE335A2A877F5D00D816CF /* Assets.xcassets in Resources */,
@@ -230,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51BB0B5B2A889AF3000CE423 /* ValueView.swift in Sources */,
+				51BB0B612A88ADC0000CE423 /* keysUtil.swift in Sources */,
 				51BB0B5D2A889FF3000CE423 /* RefreshView.swift in Sources */,
 				51EE33582A877F5C00D816CF /* ContentView.swift in Sources */,
 				51EE33682A877F8200D816CF /* api.swift in Sources */,

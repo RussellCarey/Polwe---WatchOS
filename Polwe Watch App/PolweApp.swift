@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// Main part
+// Main part --
 @main
 struct Polwe_Watch_AppApp: App {
     var body: some Scene {
