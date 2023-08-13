@@ -9,47 +9,51 @@ import Foundation
 
 // DATA SHAPE
 struct DataInfo: Decodable {
-    let city: String
-    let state: String
-    let country: String
-    let location: LocationData
+    let location: Location
     let current: CurrentInfo
 }
 
-struct LocationData: Codable {
-    let city: String
-    let state: String
+struct Location: Codable {
+    let name: String
+    let region: String
     let country: String
-    let current: CurrentInfo
+    let lat: Double
+    let lon: Double
+    let tz_id: String
+    let localtime_epoch: Int
+    let localtime: String
 }
 
 struct CurrentInfo: Codable {
-    let pollution: Pollution
-    let weather: Weather
+    let last_updated_epoch: Int
+    let last_updated: String
+    let temp_c: Double
+    let temp_f: Double
+    let is_day: Int
+    let condition: WeatherCondition
+    let wind_mph: Double
+    let wind_kph: Double
+    let wind_degree: Int
+    let wind_dir: String
+    let pressure_mb: Double
+    let pressure_in: Double
+    let precip_mm: Double
+    let precip_in: Double
+    let humidity: Int
+    let cloud: Int
+    let feelslike_c: Double
+    let feelslike_f: Double
+    let vis_km: Double
+    let vis_miles: Double
+    let uv: Double
+    let gust_mph: Double
+    let gust_kph: Double
 }
 
-struct Pollution: Codable {
-    let ts: String
-    let aqius: Int
-    let mainus: String
-    let aqicn: Int
-    let maincn: String
-}
-
-struct Weather: Codable {
-    let ts: String
-    let tp: Int
-    let pr: Int
-    let hu: Int
-    let ws: Double
-    let wd: Int
-    let ic: String
-}
-
-// DATA MODEL representing the structure of the API's response for the location data.
-struct LocationApiResponse: Codable {
-    let status: String
-    let data: LocationData
+struct WeatherCondition: Codable {
+    let text: String
+    let icon: String
+    let code: Int
 }
 
 enum APIServiceError: Error {
@@ -58,38 +62,67 @@ enum APIServiceError: Error {
 }
 
 class WeatherAPIService {
-    func fetchData() async throws -> LocationData {
+    func fetchData() async throws -> DataInfo {
         let apiKey: String = getVariable(name: "weatherAPI") ?? ""
         
-        //  API keys often require proper encoding to be included in URLs, as they might contain characters that are not URL-safe.
+        // API keys often require proper encoding to be included in URLs.
         guard let encodedApiKey = apiKey.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
             throw APIServiceError.urlError
         }
-                
-        guard let url = URL(string: "https://api.airvisual.com/v2/nearest_city?key=\(encodedApiKey)") else {
+
+        guard let url = URL(string: "https://api.weatherapi.com/v1/current.json?key=\(encodedApiKey)&q=auto:ip") else {
             throw APIServiceError.urlError
         }
 
         // Asynchronously fetch data from the URL.
         let (data, _) = try await URLSession.shared.data(from: url)
         
-        // Attempt to decode the fetched data into our LocationApiResponse model.
-        let locationApiResponse = try JSONDecoder().decode(LocationApiResponse.self, from: data)
+        // Attempt to decode the fetched data into our DataInfo model.
+        let dataInfo = try JSONDecoder().decode(DataInfo.self, from: data)
         
-        // Return the location data.
-        return locationApiResponse.data
+        // Return the data info.
+        return dataInfo
     }
+
     
     // I was trying to use this as a method.
     // WeatherAPIService().fetchLocationData() -----> This was initialzed first see WeatherAPIService()
-    static func getDummyData() -> LocationData {
-        return LocationData(
-            city: "",
-            state: "",
-            country: "",
+    static func getDummyData() -> DataInfo {
+        return DataInfo(
+            location: Location(
+                name: "",
+                region: "",
+                country: "",
+                lat: 0.0,
+                lon: 0.0,
+                tz_id: "",
+                localtime_epoch: 0,
+                localtime: ""
+            ),
             current: CurrentInfo(
-                pollution: Pollution(ts: "", aqius: 0, mainus: "", aqicn: 0, maincn: ""),
-                weather: Weather(ts: "", tp: 0, pr: 0, hu: 0, ws: 0.0, wd: 0, ic: "")
+                last_updated_epoch: 0,
+                last_updated: "",
+                temp_c: 0.0,
+                temp_f: 0.0,
+                is_day: 0,
+                condition: WeatherCondition(text: "", icon: "", code: 0),
+                wind_mph: 0.0,
+                wind_kph: 0.0,
+                wind_degree: 0,
+                wind_dir: "",
+                pressure_mb: 0.0,
+                pressure_in: 0.0,
+                precip_mm: 0.0,
+                precip_in: 0.0,
+                humidity: 0,
+                cloud: 0,
+                feelslike_c: 0.0,
+                feelslike_f: 0.0,
+                vis_km: 0.0,
+                vis_miles: 0.0,
+                uv: 0.0,
+                gust_mph: 0.0,
+                gust_kph: 0.0
             )
         )
     }

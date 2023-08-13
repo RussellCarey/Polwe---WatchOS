@@ -9,56 +9,56 @@ import Foundation
 import SwiftUI
 
 enum DataType {
-    case pollution
+    case weather
     case temperature
     case humidity
     case wind //ms
+    case uv
+    case cloud
 }
 
 struct ValueView: View {
-    @State var data: LocationData
+    @State var data: DataInfo
+    @State var showBars: Bool = true
     let dataType: DataType
     let numberRectangles: Int = 30
     
     func getMaxValue() -> Double {
         switch dataType {
-        case .pollution:
-            return 500.0
+        case .weather:
+            return 0
         case .temperature:
             return 60.0
         case .humidity:
             return 100.0
         case .wind:
             return 50.0
+        case .uv:
+            return 15.0
+        case .cloud:
+            return 100.0
         }
     }
     
     func getTitle() -> String {
         switch dataType {
-        case .pollution:
-            return "Pollution"
         case .temperature:
             return "Temp"
         case .humidity:
             return "Humidity"
         case .wind:
             return "Wind"
+        case .weather:
+            return "Weather"
+        case .uv:
+            return "UV Level"
+        case .cloud:
+            return "Cloud Cover"
         }
     }
     
     func getNotchColor(value: Double) -> Color {
         switch dataType {
-        case .pollution:
-            switch value {
-            case 0..<150:
-                return Color.green
-            case 150..<300:
-                return Color.orange
-            case 300..<501:
-                return Color.red
-            default:
-                return Color.green
-            }
         case .temperature:
             switch value {
             case 0..<20:
@@ -70,7 +70,7 @@ struct ValueView: View {
             default:
                 return Color.green
             }
-        case .humidity:
+        case .humidity, .cloud:
             switch value {
             case 0..<20:
                 return Color.green
@@ -92,93 +92,110 @@ struct ValueView: View {
             default:
                 return Color.green
             }
+        case .uv:
+            switch value {
+            case 0..<5:
+                return Color.green
+            case 5..<10:
+                return Color.orange
+            case 10..<16:
+                return Color.red
+            default:
+                return Color.green
+            }
+        case .weather:
+            return Color.green
         }
-    }
-    
-    func windDirectionFrom(degree: Int) -> String {
-        switch degree {
-        case 338...360:
-            fallthrough
-        case 0..<23:
-            return "N"
-        case 23..<68:
-            return "NE"
-        case 68..<113:
-            return "E"
-        case 113..<158:
-            return "SE"
-        case 158..<203:
-            return "S"
-        case 203..<248:
-            return "SW"
-        case 248..<293:
-            return "W"
-        case 293..<338:
-            return "NW"
-        default:
-            return "Unknown Direction"
-        }
+        
     }
     
     func getValueText() -> String{
         switch dataType {
-        case .pollution:
-            return "\(data.current.pollution.aqius) / \(data.current.pollution.mainus)"
         case .temperature:
-            return "\(data.current.weather.tp)°c"
+            return "\(data.current.temp_c)°c"
         case .humidity:
-            return "\(data.current.weather.hu)%"
+            return "\(data.current.humidity)%"
         case .wind:
-            return "\(data.current.weather.ws)ms / \(windDirectionFrom(degree: data.current.weather.wd))"
+            return "\(data.current.wind_mph)ms / \(data.current.wind_dir)"
+        case .weather:
+            return "\(data.current.condition.text)"
+        case .uv:
+            return "\(data.current.uv). \(uvDescription(value: data.current.uv))"
+        case .cloud:
+            return "\(data.current.cloud)%"
         }
     }
     
     func value() -> Double{
         switch dataType {
-        case .pollution:
-            return Double(data.current.pollution.aqius)
         case .temperature:
-            return Double(data.current.weather.tp)
+            return Double(data.current.temp_c)
         case .humidity:
-            return Double(data.current.weather.hu)
+            return Double(data.current.humidity)
         case .wind:
-            return Double(data.current.weather.ws)
+            return Double(data.current.wind_mph)
+        case .uv:
+            return Double(data.current.uv)
+        case .weather:
+            return 0.0
+        case .cloud:
+            return Double(data.current.cloud)
+        }
+    }
+    
+    func uvDescription(value: Double) -> String {
+        switch value {
+        case 0...2:
+            return "Low"
+        case 3...5:
+            return "Moderate"
+        case 6...7:
+            return "High"
+        case 8...10:
+            return "Very High"
+        case 11...:
+            return "Extreme"
+        default:
+            return "Invalid UV Index"
         }
     }
     
     var body: some View {
         VStack {
-            Spacer()
-            
             VStack(alignment: .leading) {
                 Text(getTitle())
                     .font(.system(size: 30))
-                Text("\(data.city)")
+                Text("\(data.location.name)")
                     .font(.system(size: 22))
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             
-            HStack {
-                ForEach(1...numberRectangles, id: \.self) { i in
-                    let amountPerRect = getMaxValue() / Double(numberRectangles)
-                    let currentValue = Double(i) * amountPerRect
-                    let valueToCheck = value()
-                    let color = currentValue > valueToCheck ? Color.white : getNotchColor(value: value())
-                    
-                    Rectangle()
-                        .fill(color)
-                        .frame(width: 1, height: 40)
+            if (showBars) {
+                Spacer()
+                HStack {
+                    ForEach(1...numberRectangles, id: \.self) { i in
+                        let amountPerRect = getMaxValue() / Double(numberRectangles)
+                        let currentValue = Double(i) * amountPerRect
+                        let valueToCheck = value()
+                        let color = currentValue > valueToCheck ? Color.white : getNotchColor(value: value())
+                        
+                        Rectangle()
+                            .fill(color)
+                            .frame(width: 1, height: 40)
                         Spacer()
+                    }
                 }
+                .frame(alignment: .leading)
+                .padding(.horizontal, 5)
+                Spacer()
             }
-            .frame(alignment: .leading)
-            .padding(.horizontal, 5)
             
             Spacer()
+    
             
             HStack {
                 Text(getValueText())
-                    .font(.system(size: 16))
+                    .font(.system(size: showBars ? 16 : 22))
                     .multilineTextAlignment(.leading)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -189,6 +206,6 @@ struct ValueView: View {
 
 struct ValueView_Previews: PreviewProvider {
     static var previews: some View {
-        ValueView(data: WeatherAPIService.getDummyData(), dataType: .pollution)
+        ValueView(data: WeatherAPIService.getDummyData(), dataType: .wind)
     }
 }

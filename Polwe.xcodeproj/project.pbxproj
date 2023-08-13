@@ -13,6 +13,7 @@
 		51BB0B612A88ADC0000CE423 /* keysUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB0B602A88ADC0000CE423 /* keysUtil.swift */; };
 		51BB0B652A88B40B000CE423 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 51BB0B642A88B40B000CE423 /* .gitignore */; };
 		51BB0B692A88B568000CE423 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 51BB0B682A88B568000CE423 /* README.md */; };
+		51BB0B6B2A88B763000CE423 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB0B6A2A88B763000CE423 /* WeatherView.swift */; };
 		51EE33512A877F5C00D816CF /* Polwe Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 51EE33502A877F5C00D816CF /* Polwe Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		51EE33562A877F5C00D816CF /* PolweApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EE33552A877F5C00D816CF /* PolweApp.swift */; };
 		51EE33582A877F5C00D816CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EE33572A877F5C00D816CF /* ContentView.swift */; };
@@ -53,6 +54,7 @@
 		51BB0B602A88ADC0000CE423 /* keysUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keysUtil.swift; sourceTree = "<group>"; };
 		51BB0B642A88B40B000CE423 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		51BB0B682A88B568000CE423 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		51BB0B6A2A88B763000CE423 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		51EE334A2A877F5C00D816CF /* Polwe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Polwe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51EE33502A877F5C00D816CF /* Polwe Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Polwe Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51EE33552A877F5C00D816CF /* PolweApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolweApp.swift; sourceTree = "<group>"; };
@@ -97,8 +99,8 @@
 		51EE33542A877F5C00D816CF /* Polwe Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				51EE33552A877F5C00D816CF /* PolweApp.swift */,
 				51BB0B5E2A88AD74000CE423 /* keys.plist */,
+				51EE33552A877F5C00D816CF /* PolweApp.swift */,
 				51EE33572A877F5C00D816CF /* ContentView.swift */,
 				51EE336A2A87847E00D816CF /* API */,
 				51EE33692A87847300D816CF /* Views */,
@@ -121,6 +123,7 @@
 			children = (
 				51BB0B5A2A889AF3000CE423 /* ValueView.swift */,
 				51BB0B5C2A889FF3000CE423 /* RefreshView.swift */,
+				51BB0B6A2A88B763000CE423 /* WeatherView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				51BB0B5D2A889FF3000CE423 /* RefreshView.swift in Sources */,
 				51EE33582A877F5C00D816CF /* ContentView.swift in Sources */,
 				51EE33682A877F8200D816CF /* api.swift in Sources */,
+				51BB0B6B2A88B763000CE423 /* WeatherView.swift in Sources */,
 				51EE33562A877F5C00D816CF /* PolweApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

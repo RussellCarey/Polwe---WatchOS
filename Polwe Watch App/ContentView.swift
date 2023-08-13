@@ -57,7 +57,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selectedPage) {
-            ValueView(data: weatherData, dataType: .pollution)
+            ValueView(data: weatherData, showBars: false, dataType: .weather)
                 .id(UUID())
                 .tag(0)
             ValueView(data: weatherData, dataType: .temperature)
@@ -69,6 +69,12 @@ struct ContentView: View {
             ValueView(data: weatherData, dataType: .wind)
                 .id(UUID())
                 .tag(3)
+            ValueView(data: weatherData, showBars: false, dataType: .uv)
+                .id(UUID())
+                .tag(4)
+            ValueView(data: weatherData, dataType: .cloud)
+                .id(UUID())
+                .tag(5)
             
         }
         .task {
