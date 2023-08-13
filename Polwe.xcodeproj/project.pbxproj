@@ -12,7 +12,7 @@
 		51BB0B5F2A88AD74000CE423 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51BB0B5E2A88AD74000CE423 /* keys.plist */; };
 		51BB0B612A88ADC0000CE423 /* keysUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB0B602A88ADC0000CE423 /* keysUtil.swift */; };
 		51BB0B652A88B40B000CE423 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 51BB0B642A88B40B000CE423 /* .gitignore */; };
-		51BB0B672A88B527000CE423 /* .README in Resources */ = {isa = PBXBuildFile; fileRef = 51BB0B662A88B527000CE423 /* .README */; };
+		51BB0B692A88B568000CE423 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 51BB0B682A88B568000CE423 /* README.md */; };
 		51EE33512A877F5C00D816CF /* Polwe Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 51EE33502A877F5C00D816CF /* Polwe Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		51EE33562A877F5C00D816CF /* PolweApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EE33552A877F5C00D816CF /* PolweApp.swift */; };
 		51EE33582A877F5C00D816CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EE33572A877F5C00D816CF /* ContentView.swift */; };
@@ -52,7 +52,7 @@
 		51BB0B5E2A88AD74000CE423 /* keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		51BB0B602A88ADC0000CE423 /* keysUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keysUtil.swift; sourceTree = "<group>"; };
 		51BB0B642A88B40B000CE423 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		51BB0B662A88B527000CE423 /* .README */ = {isa = PBXFileReference; lastKnownFileType = text; path = .README; sourceTree = "<group>"; };
+		51BB0B682A88B568000CE423 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		51EE334A2A877F5C00D816CF /* Polwe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Polwe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51EE33502A877F5C00D816CF /* Polwe Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Polwe Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51EE33552A877F5C00D816CF /* PolweApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolweApp.swift; sourceTree = "<group>"; };
@@ -77,8 +77,8 @@
 		51EE33432A877F5B00D816CF = {
 			isa = PBXGroup;
 			children = (
-				51BB0B662A88B527000CE423 /* .README */,
 				51BB0B642A88B40B000CE423 /* .gitignore */,
+				51BB0B682A88B568000CE423 /* README.md */,
 				51EE336F2A878B1E00D816CF /* Fonts */,
 				51EE33542A877F5C00D816CF /* Polwe Watch App */,
 				51EE334B2A877F5C00D816CF /* Products */,
@@ -228,10 +228,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51BB0B692A88B568000CE423 /* README.md in Resources */,
 				51BB0B652A88B40B000CE423 /* .gitignore in Resources */,
 				51BB0B5F2A88AD74000CE423 /* keys.plist in Resources */,
 				51EE336E2A878B0C00D816CF /* Inter.ttf in Resources */,
-				51BB0B672A88B527000CE423 /* .README in Resources */,
 				51EE335D2A877F5D00D816CF /* Preview Assets.xcassets in Resources */,
 				51EE335A2A877F5D00D816CF /* Assets.xcassets in Resources */,
 			);
