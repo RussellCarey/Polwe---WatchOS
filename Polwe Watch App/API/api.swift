@@ -59,8 +59,14 @@ enum APIServiceError: Error {
 
 class WeatherAPIService {
     func fetchData() async throws -> LocationData {
-        // Attempt to create a URL for the API endpoint.
-        guard let url = URL(string: getVariable(name: "weatherAPI") ?? "") else {
+        let apiKey: String = getVariable(name: "weatherAPI") ?? ""
+        
+        //  API keys often require proper encoding to be included in URLs, as they might contain characters that are not URL-safe.
+        guard let encodedApiKey = apiKey.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+            throw APIServiceError.urlError
+        }
+                
+        guard let url = URL(string: "https://api.airvisual.com/v2/nearest_city?key=\(encodedApiKey)") else {
             throw APIServiceError.urlError
         }
 
