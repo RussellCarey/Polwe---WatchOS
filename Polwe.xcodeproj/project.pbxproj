@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		51BB0B5B2A889AF3000CE423 /* ValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB0B5A2A889AF3000CE423 /* ValueView.swift */; };
+		51BB0B5D2A889FF3000CE423 /* RefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB0B5C2A889FF3000CE423 /* RefreshView.swift */; };
+		51EE33512A877F5C00D816CF /* Polwe Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 51EE33502A877F5C00D816CF /* Polwe Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		51EE33562A877F5C00D816CF /* PolweApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EE33552A877F5C00D816CF /* PolweApp.swift */; };
+		51EE33582A877F5C00D816CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EE33572A877F5C00D816CF /* ContentView.swift */; };
+		51EE335A2A877F5D00D816CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51EE33592A877F5D00D816CF /* Assets.xcassets */; };
+		51EE335D2A877F5D00D816CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51EE335C2A877F5D00D816CF /* Preview Assets.xcassets */; };
+		51EE33682A877F8200D816CF /* api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EE33672A877F8200D816CF /* api.swift */; };
+		51EE336E2A878B0C00D816CF /* Inter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51EE336D2A878B0C00D816CF /* Inter.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		51EE33522A877F5C00D816CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51EE33442A877F5B00D816CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51EE334F2A877F5C00D816CF;
+			remoteInfo = "Polwe Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		51EE33632A877F5D00D816CF /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				51EE33512A877F5C00D816CF /* Polwe Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		51BB0B5A2A889AF3000CE423 /* ValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueView.swift; sourceTree = "<group>"; };
+		51BB0B5C2A889FF3000CE423 /* RefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshView.swift; sourceTree = "<group>"; };
+		51EE334A2A877F5C00D816CF /* Polwe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Polwe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		51EE33502A877F5C00D816CF /* Polwe Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Polwe Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		51EE33552A877F5C00D816CF /* PolweApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolweApp.swift; sourceTree = "<group>"; };
+		51EE33572A877F5C00D816CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		51EE33592A877F5D00D816CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		51EE335C2A877F5D00D816CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		51EE33672A877F8200D816CF /* api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api.swift; sourceTree = "<group>"; };
+		51EE336D2A878B0C00D816CF /* Inter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inter.ttf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		51EE334D2A877F5C00D816CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		51EE33432A877F5B00D816CF = {
+			isa = PBXGroup;
+			children = (
+				51EE336F2A878B1E00D816CF /* Fonts */,
+				51EE33542A877F5C00D816CF /* Polwe Watch App */,
+				51EE334B2A877F5C00D816CF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		51EE334B2A877F5C00D816CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				51EE334A2A877F5C00D816CF /* Polwe.app */,
+				51EE33502A877F5C00D816CF /* Polwe Watch App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		51EE33542A877F5C00D816CF /* Polwe Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				51EE33552A877F5C00D816CF /* PolweApp.swift */,
+				51EE33572A877F5C00D816CF /* ContentView.swift */,
+				51EE336A2A87847E00D816CF /* API */,
+				51EE33692A87847300D816CF /* Views */,
+				51EE33592A877F5D00D816CF /* Assets.xcassets */,
+				51EE335B2A877F5D00D816CF /* Preview Content */,
+			);
+			path = "Polwe Watch App";
+			sourceTree = "<group>";
+		};
+		51EE335B2A877F5D00D816CF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				51EE335C2A877F5D00D816CF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		51EE33692A87847300D816CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				51BB0B5A2A889AF3000CE423 /* ValueView.swift */,
+				51BB0B5C2A889FF3000CE423 /* RefreshView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		51EE336A2A87847E00D816CF /* API */ = {
+			isa = PBXGroup;
+			children = (
+				51EE33672A877F8200D816CF /* api.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		51EE336F2A878B1E00D816CF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				51EE336D2A878B0C00D816CF /* Inter.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		51EE33492A877F5C00D816CF /* Polwe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51EE33642A877F5D00D816CF /* Build configuration list for PBXNativeTarget "Polwe" */;
+			buildPhases = (
+				51EE33482A877F5C00D816CF /* Resources */,
+				51EE33632A877F5D00D816CF /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				51EE33532A877F5C00D816CF /* PBXTargetDependency */,
+			);
+			name = Polwe;
+			productName = Polwe;
+			productReference = 51EE334A2A877F5C00D816CF /* Polwe.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		51EE334F2A877F5C00D816CF /* Polwe Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51EE33602A877F5D00D816CF /* Build configuration list for PBXNativeTarget "Polwe Watch App" */;
+			buildPhases = (
+				51EE334C2A877F5C00D816CF /* Sources */,
+				51EE334D2A877F5C00D816CF /* Frameworks */,
+				51EE334E2A877F5C00D816CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Polwe Watch App";
+			productName = "Polwe Watch App";
+			productReference = 51EE33502A877F5C00D816CF /* Polwe Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		51EE33442A877F5B00D816CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					51EE33492A877F5C00D816CF = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					51EE334F2A877F5C00D816CF = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 51EE33472A877F5B00D816CF /* Build configuration list for PBXProject "Polwe" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 51EE33432A877F5B00D816CF;
+			productRefGroup = 51EE334B2A877F5C00D816CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				51EE33492A877F5C00D816CF /* Polwe */,
+				51EE334F2A877F5C00D816CF /* Polwe Watch App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		51EE33482A877F5C00D816CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51EE334E2A877F5C00D816CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51EE336E2A878B0C00D816CF /* Inter.ttf in Resources */,
+				51EE335D2A877F5D00D816CF /* Preview Assets.xcassets in Resources */,
+				51EE335A2A877F5D00D816CF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		51EE334C2A877F5C00D816CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51BB0B5B2A889AF3000CE423 /* ValueView.swift in Sources */,
+				51BB0B5D2A889FF3000CE423 /* RefreshView.swift in Sources */,
+				51EE33582A877F5C00D816CF /* ContentView.swift in Sources */,
+				51EE33682A877F8200D816CF /* api.swift in Sources */,
+				51EE33562A877F5C00D816CF /* PolweApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		51EE33532A877F5C00D816CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51EE334F2A877F5C00D816CF /* Polwe Watch App */;
+			targetProxy = 51EE33522A877F5C00D816CF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		51EE335E2A877F5D00D816CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		51EE335F2A877F5D00D816CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		51EE33612A877F5D00D816CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Polwe Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 8VT5UQ9FFK;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Polwe;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = carey.russell.Polwe.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		51EE33622A877F5D00D816CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Polwe Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 8VT5UQ9FFK;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Polwe;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = carey.russell.Polwe.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+		51EE33652A877F5D00D816CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8VT5UQ9FFK;
+				INFOPLIST_KEY_CFBundleDisplayName = Polwe;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = carey.russell.Polwe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		51EE33662A877F5D00D816CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8VT5UQ9FFK;
+				INFOPLIST_KEY_CFBundleDisplayName = Polwe;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = carey.russell.Polwe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		51EE33472A877F5B00D816CF /* Build configuration list for PBXProject "Polwe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51EE335E2A877F5D00D816CF /* Debug */,
+				51EE335F2A877F5D00D816CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51EE33602A877F5D00D816CF /* Build configuration list for PBXNativeTarget "Polwe Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51EE33612A877F5D00D816CF /* Debug */,
+				51EE33622A877F5D00D816CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51EE33642A877F5D00D816CF /* Build configuration list for PBXNativeTarget "Polwe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51EE33652A877F5D00D816CF /* Debug */,
+				51EE33662A877F5D00D816CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 51EE33442A877F5B00D816CF /* Project object */;
+}
